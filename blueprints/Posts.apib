@@ -1,13 +1,13 @@
 FORMAT: 1A
 HOST: http://sosmed.co.id
 
-# Posts
+# Sosmed
 
-  Posts is a API to retrive, create, update and delete a post
+  Sosmed is a API to retrive a post and comment
 
-## Posts API [/posts]
+## Posts API
 
-### list all post [GET]
+### list all post [GET /posts]
 
 + Request (application/json)
 
@@ -21,63 +21,86 @@ HOST: http://sosmed.co.id
 
               [
                 {
-                  "user_id":1,
+                  "userId":1,
                   "id":1,
                   "title":"judul 1",
                   "body":"ini adalah konten 1"
                 },
                 {
-                  "user_id":2,
+                  "userId":2,
                   "id":2,
                   "title":"judul 2",
                   "body":"ini adalah konten 2"
                 },
                 {
-                  "user_id":3,
+                  "userId":3,
                   "id":3,
                   "title":"judul 3",
                   "body":"ini adalah konten 3"
                 },
                 {
-                  "user_id":4,
+                  "userId":4,
                   "id":4,
                   "title":"judul 4",
                   "body":"ini adalah konten 4"
                 },
                 {
-                  "user_id":5,
+                  "userId":5,
                   "id":5,
                   "title":"judul 5",
                   "body":"ini adalah konten 5"
                 },
                 {
-                  "user_id":6,
+                  "userId":6,
                   "id":6,
                   "title":"judul 6",
                   "body":"ini adalah konten 6"
                 },
                 {
-                  "user_id":7,
+                  "userId":7,
                   "id":7,
                   "title":"judul 7",
                   "body":"ini adalah konten 7"
                 },
                 {
-                  "user_id":8,
+                  "userId":8,
                   "id":8,
                   "title":"judul 8",
                   "body":"ini adalah konten 8"
                 },
                 {
-                  "user_id":9,
+                  "userId":9,
                   "id":9,
                   "title":"judul 9",
                   "body":"ini adalah konten 9"
                 },
                 {
-                  "user_id":10,
+                  "userId":10,
                   "id":10,
                   "title":"judul 10",
                   "body":"ini adalah konten 10"
                 }
               ]
+
+## Data Post by id [GET /posts/{id}]
+
++ Parameters
+
+      + id : 1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Berer abcdefghaiklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+      + Body
+
+              {
+                "userId":1,
+                "id":1,
+                "title":"ini judul 1",
+                "body":"ini konten 1"
+              }
