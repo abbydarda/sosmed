@@ -1,0 +1,209 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# albums
+
+albums is a simple API to view, create, update, delete a album.
+
+## Albums API [/albums]
+
+### retrieve all albums [GET /albums]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+            [
+              {
+                "userId": 1,
+                "id": 1,
+                "title": "album 1"
+              },
+              {
+                "userId": 1,
+                "id": 2,
+                "title": "album 2"
+              },
+              {
+                "userId": 1,
+                "id": 3,
+                "title": "album 3"
+              },
+              {
+                "userId": 1,
+                "id": 4,
+                "title": "album 4"
+              },
+              {
+                "userId": 1,
+                "id": 5,
+                "title": "album 5"
+              },
+              {
+                "userId": 2,
+                "id": 6,
+                "title": "album 6"
+              },
+              {
+                "userId": 2,
+                "id": 7,
+                "title": "album 7"
+              },
+              {
+                "userId": 2,
+                "id": 8,
+                "title": "album 8"
+              },
+              {
+                "userId": 2,
+                "id": 9,
+                "title": "album 9"
+              },
+              {
+                "userId": 2,
+                "id": 10,
+                "title": "album 10"
+              }
+            ]
+
+### retrieve albums by id [GET /albums/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+            {
+              "userId": 1,
+              "id": 1,
+              "title": "album 1"
+            }
+
+### retrieve albums by userId [GET /albums/{userId}]
+
++ Parameters
+
+     + userId:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+            [
+              {
+                "userId": 1,
+                "id": 1,
+                "title": "album 1"
+              },
+              {
+                "userId": 1,
+                "id": 2,
+                "title": "album 2"
+              },
+              {
+                "userId": 1,
+                "id": 3,
+                "title": "album 3"
+              },
+              {
+                "userId": 1,
+                "id": 4,
+                "title": "album 4"
+              },
+              {
+                "userId": 1,
+                "id": 5,
+                "title": "album 5"
+              }
+            ]
+
+### create new album [POST /albums]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+            {
+              "userId": 1,
+              "id": 1,
+              "title": "album 1"
+            }
+
++ Response 200 (application/json)
+
+     + Body
+
+            {
+              "userId": 1,
+              "id": 1,
+              "title": "album 1"
+            }
+
+### update albums [PUT /albums/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+            {
+              "userId": 1,
+              "id": 1,
+              "title": "album satu"
+            }
+
++ Response 200 (application/json)
+
+     + Body
+
+            {
+              "userId": 1,
+              "id": 1,
+              "title": "album satu"
+            }
+
+### delete albums [DELETE /albums/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 204
