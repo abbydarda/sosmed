@@ -82,7 +82,7 @@ HOST: http://sosmed.co.id
                 }
               ]
 
-## Data Post by id [GET /posts/{id}]
+### Data Post by id [GET /posts/{id}]
 
 + Parameters
 
@@ -104,3 +104,111 @@ HOST: http://sosmed.co.id
                 "title":"ini judul 1",
                 "body":"ini konten 1"
               }
+
+### Data Comment by PostId [GET /posts/{PostId}/comments]
+
++ Parameters
+
+      + PostId : 1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Berer abcdefghaiklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+      + Body
+
+              [
+                {
+                  "PostId":1,
+                  "id":1,
+                  "name":"ini name 1",
+                  "email":"1@gmail.com",
+                  "body":"ini komen 1"
+                },
+                {
+                  "PostId":1,
+                  "id":2,
+                  "name":"ini name 2",
+                  "email":"2@gmail.com",
+                  "body":"ini komen 2"
+                },
+                {
+                  "PostId":1,
+                  "id":3,
+                  "name":"ini name 3",
+                  "email":"3@gmail.com",
+                  "body":"ini komen 3"
+                },
+                {
+                  "PostId":1,
+                  "id":4,
+                  "name":"ini name 4",
+                  "email":"4gmail.com",
+                  "body":"ini komen 4"
+                },
+                {
+                  "PostId":1,
+                  "id":5,
+                  "name":"ini name 5",
+                  "email":"5@gmail.com",
+                  "body":"ini komen 5"
+                }
+              ]
+
+### Data Comment by PostId [GET /comments{?PostId}]
+
++ Parameters
+
+      + PostId : 1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Berer abcdefghaiklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+      + Body
+
+              [
+                {
+                  "PostId":1,
+                  "id":1,
+                  "name":"ini name 1",
+                  "email":"1@gmail.com",
+                  "body":"ini komen 1"
+                },
+                {
+                  "PostId":1,
+                  "id":2,
+                  "name":"ini name 2",
+                  "email":"2@gmail.com",
+                  "body":"ini komen 2"
+                },
+                {
+                  "PostId":1,
+                  "id":3,
+                  "name":"ini name 3",
+                  "email":"3@gmail.com",
+                  "body":"ini komen 3"
+                },
+                {
+                  "PostId":1,
+                  "id":4,
+                  "name":"ini name 4",
+                  "email":"4gmail.com",
+                  "body":"ini komen 4"
+                },
+                {
+                  "PostId":1,
+                  "id":5,
+                  "name":"ini name 5",
+                  "email":"5@gmail.com",
+                  "body":"ini komen 5"
+                }
+              ]
