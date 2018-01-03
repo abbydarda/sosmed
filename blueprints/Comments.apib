@@ -1,0 +1,250 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# comments
+
+Comments is a simple API to view, create, update and delete a comments.
+
+## Comments API [/comments]
+
+### retrieve all comment [GET /comments]
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+      + Body
+
+            [
+                {
+                  "postId":1,
+                  "id":1,
+                  "name":"ini name 1",
+                  "email":"1@gmail.com",
+                  "body":"ini komen 1"
+                },
+                {
+                  "postId":1,
+                  "id":2,
+                  "name":"ini name 2",
+                  "email":"2@gmail.com",
+                  "body":"ini komen 2"
+                },
+                {
+                  "postId":1,
+                  "id":3,
+                  "name":"ini name 3",
+                  "email":"3@gmail.com",
+                  "body":"ini komen 3"
+                },
+                {
+                  "postId":1,
+                  "id":4,
+                  "name":"ini name 4",
+                  "email":"4gmail.com",
+                  "body":"ini komen 4"
+                },
+                {
+                  "postId":1,
+                  "id":5,
+                  "name":"ini name 5",
+                  "email":"5@gmail.com",
+                  "body":"ini komen 5"
+                },
+                {
+                  "postId":2,
+                  "id":6,
+                  "name":"ini name 7",
+                  "email":"7@gmail.com",
+                  "body":"ini komen 7"
+                },
+                {
+                  "postId":2,
+                  "id":7,
+                  "name":"ini name 7",
+                  "email":"7@gmail.com",
+                  "body":"ini komen 7"
+                },
+                {
+                  "postId":2,
+                  "id":8,
+                  "name":"ini name 8",
+                  "email":"8@gmail.com",
+                  "body":"ini komen 8"
+                },
+                {
+                  "postId":2,
+                  "id":9,
+                  "name":"ini name 9",
+                  "email":"9gmail.com",
+                  "body":"ini komen 9"
+                },
+                {
+                  "postId":2,
+                  "id":10,
+                  "name":"ini name 10",
+                  "email":"10@gmail.com",
+                  "body":"ini komen 10"
+                }
+            ]
+
+
+### retrieve comment by id [GET /comments/{id}]
+
++ Parameters
+
+      + id: 1
+
++ Request (application//json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+      + Body
+
+              {
+                "postId":1,
+                "id":1,
+                "name":"ini name 1",
+                "email":"1@gmail.com",
+                "body":"ini komen 1"
+              }
+
+### retrieve comment by postId [GET /comments{?postId}]
+
++ Parameters
+
+      + postId : 1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+      + Body
+
+              [
+                {
+                  "postId":1,
+                  "id":1,
+                  "name":"ini name 1",
+                  "email":"1@gmail.com",
+                  "body":"ini komen 1"
+                },
+                {
+                  "postId":1,
+                  "id":2,
+                  "name":"ini name 2",
+                  "email":"2@gmail.com",
+                  "body":"ini komen 2"
+                },
+                {
+                  "postId":1,
+                  "id":3,
+                  "name":"ini name 3",
+                  "email":"3@gmail.com",
+                  "body":"ini komen 3"
+                },
+                {
+                  "postId":1,
+                  "id":4,
+                  "name":"ini name 4",
+                  "email":"4gmail.com",
+                  "body":"ini komen 4"
+                },
+                {
+                  "postId":1,
+                  "id":5,
+                  "name":"ini name 5",
+                  "email":"5@gmail.com",
+                  "body":"ini komen 5"
+                }
+              ]
+
+### create new comments [POST /comments]
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+      + Body
+
+              {
+                  "postId":1,
+                  "id":1,
+                  "name":"ini name 1",
+                  "email":"1@gmail.com",
+                  "body":"ini komen 1"
+              }
+
++ Response 201 (application/json)
+
+      + Body
+
+            {
+                "postId":1,
+                "id":1,
+                "name":"ini name 1",
+                "email":"1@gmail.com",
+                "body":"ini komen 1"
+            }
+
+### update comments [PUT /comments/{id}]
+
++ Parameters
+
+      + id:1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+      + Body
+
+              {
+                  "postId":1,
+                  "id":1,
+                  "name":"ini name satu",
+                  "email":"satu@gmail.com",
+                  "body":"ini komen satu"
+              }
+
++ Response 200 (application/json)
+
+      + Body
+
+            {
+                "postId":1,
+                "id":1,
+                "name":"ini name satu",
+                "email":"satu@gmail.com",
+                "body":"ini komen satu"
+            }
+
+### delete new comments [DELETE /comments/{id}]
+
++ Parameters
+
+      + id:1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
++ Response 204
