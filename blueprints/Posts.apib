@@ -1,11 +1,11 @@
 FORMAT: 1A
 HOST: http://sosmed.co.id
 
-# Sosmed
+# Post
 
-  Sosmed is a API to retrive a post and comment
+  Post is a API to retrive, create, update, delete a post
 
-## Posts API
+## Posts API [/posts]
 
 ### list all post [GET /posts]
 
@@ -13,7 +13,7 @@ HOST: http://sosmed.co.id
 
       + Headers
 
-              Authorization : Berer abcdefghaiklmnopqrstupwxyz
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
 + Response 200 (application/json)
 
@@ -82,7 +82,7 @@ HOST: http://sosmed.co.id
                 }
               ]
 
-### Data Post by id [GET /posts/{id}]
+### retrive post by id [GET /posts/{id}]
 
 + Parameters
 
@@ -92,7 +92,7 @@ HOST: http://sosmed.co.id
 
       + Headers
 
-              Authorization : Berer abcdefghaiklmnopqrstupwxyz
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
 + Response 200 (application/json)
 
@@ -105,17 +105,17 @@ HOST: http://sosmed.co.id
                 "body":"ini konten 1"
               }
 
-### Data Comment by PostId [GET /posts/{PostId}/comments]
+### retrive comment from post by postId [GET /posts/{postId}/comments]
 
 + Parameters
 
-      + PostId : 1
+      + postId : 1
 
 + Request (application/json)
 
       + Headers
 
-              Authorization : Berer abcdefghaiklmnopqrstupwxyz
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
 + Response 200 (application/json)
 
@@ -123,35 +123,28 @@ HOST: http://sosmed.co.id
 
               [
                 {
-                  "PostId":1,
-                  "id":1,
-                  "name":"ini name 1",
-                  "email":"1@gmail.com",
-                  "body":"ini komen 1"
-                },
-                {
-                  "PostId":1,
+                  "postId":1,
                   "id":2,
                   "name":"ini name 2",
                   "email":"2@gmail.com",
                   "body":"ini komen 2"
                 },
                 {
-                  "PostId":1,
+                  "postId":1,
                   "id":3,
                   "name":"ini name 3",
                   "email":"3@gmail.com",
                   "body":"ini komen 3"
                 },
                 {
-                  "PostId":1,
+                  "postId":1,
                   "id":4,
                   "name":"ini name 4",
                   "email":"4gmail.com",
                   "body":"ini komen 4"
                 },
                 {
-                  "PostId":1,
+                  "postId":1,
                   "id":5,
                   "name":"ini name 5",
                   "email":"5@gmail.com",
@@ -159,17 +152,17 @@ HOST: http://sosmed.co.id
                 }
               ]
 
-### Data Comment by PostId [GET /comments{?PostId}]
+### retrive post by userId [GET /posts{?userId}]
 
 + Parameters
 
-      + PostId : 1
+      + userId : 1
 
 + Request (application/json)
 
       + Headers
 
-              Authorization : Berer abcdefghaiklmnopqrstupwxyz
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
 + Response 200 (application/json)
 
@@ -177,38 +170,135 @@ HOST: http://sosmed.co.id
 
               [
                 {
-                  "PostId":1,
+                  "userId":1,
                   "id":1,
-                  "name":"ini name 1",
-                  "email":"1@gmail.com",
-                  "body":"ini komen 1"
+                  "title":"judul 1",
+                  "body":"ini adalah konten 1"
                 },
                 {
-                  "PostId":1,
+                  "userId":1,
                   "id":2,
-                  "name":"ini name 2",
-                  "email":"2@gmail.com",
-                  "body":"ini komen 2"
+                  "title":"judul 2",
+                  "body":"ini adalah konten 2"
                 },
                 {
-                  "PostId":1,
+                  "userId":1,
                   "id":3,
-                  "name":"ini name 3",
-                  "email":"3@gmail.com",
-                  "body":"ini komen 3"
+                  "title":"judul 3",
+                  "body":"ini adalah konten 3"
                 },
                 {
-                  "PostId":1,
+                  "userId":1,
                   "id":4,
-                  "name":"ini name 4",
-                  "email":"4gmail.com",
-                  "body":"ini komen 4"
+                  "title":"judul 4",
+                  "body":"ini adalah konten 4"
                 },
                 {
-                  "PostId":1,
+                  "userId":1,
                   "id":5,
-                  "name":"ini name 5",
-                  "email":"5@gmail.com",
-                  "body":"ini komen 5"
+                  "title":"judul 5",
+                  "body":"ini adalah konten 5"
+                },
+                {
+                  "userId":1,
+                  "id":6,
+                  "title":"judul 6",
+                  "body":"ini adalah konten 6"
+                },
+                {
+                  "userId":1,
+                  "id":7,
+                  "title":"judul 7",
+                  "body":"ini adalah konten 7"
+                },
+                {
+                  "userId":1,
+                  "id":8,
+                  "title":"judul 8",
+                  "body":"ini adalah konten 8"
+                },
+                {
+                  "userId":1,
+                  "id":9,
+                  "title":"judul 9",
+                  "body":"ini adalah konten 9"
+                },
+                {
+                  "userId":1,
+                  "id":10,
+                  "title":"judul 10",
+                  "body":"ini adalah konten 10"
                 }
               ]
+
+### create a new post [POST /posts]
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+      + Body
+
+              {
+                "userId":1,
+                "id":1,
+                "title":"ini judul 1",
+                "body":"ini konten 1"
+              }
+
++ Response 201 (application/json)
+
+      + Body
+
+              {
+                "userId":1,
+                "id":1,
+                "title":"ini judul 1",
+                "body":"ini konten 1"
+              }
+
+### update a post [PUT /posts/{id}]
+
++ Parameters
+
+      + id : 1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+      + Body
+
+              {
+                "title":"ini judul satu",
+                "body":"ini konten satu"
+              }
+
++ Response 200 (application/json)
+
+      + Body
+
+              {
+                "userId":1,
+                "id":1,
+                "title":"ini judul satu",
+                "body":"ini konten satu"
+              }
+
+### delete a post [DELETE /posts/{id}]
+
++ Parameters
+
+      + id : 1
+
++ Request (application/json)
+
+      + Headers
+
+              Authorization: Bearer abcdefghaiklmnopqrstupwxyz
+
++ Response 204
