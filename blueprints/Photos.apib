@@ -1,0 +1,247 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# photos
+
+photos is a simple API to view, create, update, delete a photos.
+
+## Photos API [/photos]
+
+### retrieve all photos [GET /photos]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+            [
+              {
+                "albumId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "url": "http://placehold.it/600/92c952",
+                "thumbnailUrl": "http://placehold.it/150/92c952"
+              },
+              {
+                "albumId": 1,
+                "id": 2,
+                "title": "judul 2",
+                "url": "http://placehold.it/600/771796",
+                "thumbnailUrl": "http://placehold.it/150/771796"
+              },
+              {
+                "albumId": 1,
+                "id": 3,
+                "title": "judul 3",
+                "url": "http://placehold.it/600/24f355",
+                "thumbnailUrl": "http://placehold.it/150/24f355"
+              },
+              {
+                "albumId": 1,
+                "id": 4,
+                "title": "judul 4",
+                "url": "http://placehold.it/600/d32776",
+                "thumbnailUrl": "http://placehold.it/150/d32776"
+              },
+              {
+                "albumId": 1,
+                "id": 5,
+                "title": "judul 5",
+                "url": "http://placehold.it/600/f66b97",
+                "thumbnailUrl": "http://placehold.it/150/f66b97"
+              },
+              {
+                "albumId":2,
+                "id": 6,
+                "title": "judul 6",
+                "url": "http://placehold.it/600/56a8c2",
+                "thumbnailUrl": "http://placehold.it/150/56a8c2"
+              },
+              {
+                "albumId": 2,
+                "id": 7,
+                "title": "judul 7",
+                "url": "http://placehold.it/600/b0f7cc",
+                "thumbnailUrl": "http://placehold.it/150/b0f7cc"
+              },
+              {
+                "albumId": 2,
+                "id": 8,
+                "title": "judul 8",
+                "url": "http://placehold.it/600/54176f",
+                "thumbnailUrl": "http://placehold.it/150/54176f"
+              },
+              {
+                "albumId": 2,
+                "id": 9,
+                "title": "judul 9",
+                "url": "http://placehold.it/600/51aa97",
+                "thumbnailUrl": "http://placehold.it/150/51aa97"
+              },
+              {
+                "albumId": 2,
+                "id": 10,
+                "title": "judul 10",
+                "url": "http://placehold.it/600/810b14",
+                "thumbnailUrl": "http://placehold.it/150/810b14"
+              }
+            ]
+
+### retrieve photos by id [GET /photos/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+            {
+              "albumId": 1,
+              "id": 1,
+              "title": "judul 1",
+              "url": "http://placehold.it/600/810b14",
+              "thumbnailUrl": "http://placehold.it/150/810b14"
+            }
+
+### retrieve photos by albumId [GET /photos/{albumId}]
+
++ Parameters
+
+     + albumId:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+            [
+              {
+                "albumId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "url": "http://placehold.it/600/92c952",
+                "thumbnailUrl": "http://placehold.it/150/92c952"
+              },
+              {
+                "albumId": 1,
+                "id": 2,
+                "title": "judul 2",
+                "url": "http://placehold.it/600/771796",
+                "thumbnailUrl": "http://placehold.it/150/771796"
+              },
+              {
+                "albumId": 1,
+                "id": 3,
+                "title": "judul 3",
+                "url": "http://placehold.it/600/24f355",
+                "thumbnailUrl": "http://placehold.it/150/24f355"
+              },
+              {
+                "albumId": 1,
+                "id": 4,
+                "title": "judul 4",
+                "url": "http://placehold.it/600/d32776",
+                "thumbnailUrl": "http://placehold.it/150/d32776"
+              },
+              {
+                "albumId": 1,
+                "id": 5,
+                "title": "judul 5",
+                "url": "http://placehold.it/600/f66b97",
+                "thumbnailUrl": "http://placehold.it/150/f66b97"
+              }
+            ]
+
+### create new photos [POST /photos]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+              {
+                "albumId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "url": "http://placehold.it/600/92c952",
+                "thumbnailUrl": "http://placehold.it/150/92c952"
+              }
+
++ Response 201 (application/json)
+
+     + Body
+
+              {
+                "albumId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "url": "http://placehold.it/600/92c952",
+                "thumbnailUrl": "http://placehold.it/150/92c952"
+              }
+
+### update photos [PUT /photos/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+              {
+                "albumId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "url": "http://placehold.it/600/92c950",
+                "thumbnailUrl": "http://placehold.it/150/92c950"
+              }
+
++ Response 200 (application/json)
+
+     + Body
+
+              {
+                "albumId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "url": "http://placehold.it/600/92c950",
+                "thumbnailUrl": "http://placehold.it/150/92c950"
+              }
+
+### delete photos [DELETE /photos/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 204
