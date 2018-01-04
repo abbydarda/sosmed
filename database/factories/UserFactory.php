@@ -18,7 +18,25 @@ $factory->define(App\User::class, function (Faker $faker) {
 
     return [
         'name' => $faker->name,
+        'username' => $faker->username,
         'email' => $faker->unique()->safeEmail,
+        'address' => [
+          'street'=> $faker->streetAddress,
+          'suite' => $faker->secondaryAddress,
+          'city' => $faker->city,
+          'zipcode' => $faker->postcode,
+          'geo'=>[
+            'lat'=> $faker->latitude,
+            'lang'=> $faker->longitude
+          ]
+        ],
+        'phone' => $faker->phoneNumber,
+        'website' => $faker->domainName,
+        'company' => [
+          'name' => $faker->company,
+          'catchPhrase' => $faker->catchPhrase,
+          'bs' => $faker->bs
+        ],
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
     ];
