@@ -1,0 +1,227 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# todos
+
+todos is a simple API to view, create, update, delete a todos.
+
+## Todos API [/todos]
+
+### retrieve all todos [GET /todos]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+            [
+              {
+                "userId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "completed": false
+              },
+              {
+                "userId": 1,
+                "id": 2,
+                "title": "judul 2",
+                "completed": false
+              },
+              {
+                "userId": 1,
+                "id": 3,
+                "title": "judul 3",
+                "completed": false
+              },
+              {
+                "userId": 1,
+                "id": 4,
+                "title": "judul 4",
+                "completed": true
+              },
+              {
+                "userId": 1,
+                "id": 5,
+                "title": "judul 5",
+                "completed": false
+              },
+              {
+                "userId": 2,
+                "id": 6,
+                "title": "judul 6",
+                "completed": false
+              },
+              {
+                "userId": 2,
+                "id": 7,
+                "title": "judul 7",
+                "completed": false
+              },
+              {
+                "userId": 2,
+                "id": 8,
+                "title": "judul 8",
+                "completed": true
+              },
+              {
+                "userId": 2,
+                "id": 9,
+                "title": "judul 9",
+                "completed": false
+              },
+              {
+                "userId": 2,
+                "id": 10,
+                "title": "judul 10",
+                "completed": true
+              }
+            ]
+
+### retrieve todos by id [GET /todos/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+            {
+               "userId": 1,
+               "id": 1,
+               "title": "judul 1",
+               "completed": false
+            }
+
+### retrieve todos by userId [GET /todos/{userId}]
+
++ Parameters
+
+     + userId:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+            [
+              {
+                "userId": 1,
+                "id": 1,
+                "title": "judul 1",
+                "completed": false
+              },
+              {
+                "userId": 1,
+                "id": 2,
+                "title": "judul 2",
+                "completed": false
+              },
+              {
+                "userId": 1,
+                "id": 3,
+                "title": "judul 3",
+                "completed": false
+              },
+              {
+                "userId": 1,
+                "id": 4,
+                "title": "judul 4",
+                "completed": true
+              },
+              {
+                "userId": 1,
+                "id": 5,
+                "title": "judul 5",
+                "completed": false
+              }
+            ]
+
+### create new todos [POST /todos]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+            {
+               "userId": 1,
+               "id": 1,
+               "title": "judul 1",
+               "completed": false
+            }
+
++ Response 201 (application/json)
+
+     + Body
+
+            {
+               "userId": 1,
+               "id": 1,
+               "title": "judul 1",
+               "completed": false
+            }
+
+### update todos [PUT /todos/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+            {
+               "userId": 1,
+               "id": 1,
+               "title": "judul satu",
+               "completed": false
+            }
+
++ Response 200 (application/json)
+
+     + Body
+
+            {
+               "userId": 1,
+               "id": 1,
+               "title": "judul satu",
+               "completed": false
+            }
+
+### delete todos [DELETE /todos/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 204
