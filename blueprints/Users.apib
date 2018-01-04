@@ -1,0 +1,271 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# users
+
+users is a simple API to view, create, update, delete a users.
+
+## Users API [/users]
+
+### retrieve all users [GET /users]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+            [
+              {
+                "id": 1,
+                "name": "nama 1",
+                "username": "satu",
+                "email": "1@gmail.com",
+                "address": {
+                  "street": "jalan 1",
+                  "suite": "apt 1",
+                  "city": "kota 1",
+                  "zipcode": "92998-3874",
+                  "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                  }
+                },
+                "phone": "089639534610",
+                "website": "satu.org",
+                "company": {
+                  "name": "satu.Inc",
+                  "catchPhrase": "Multi-layered client-server neural-net",
+                  "bs": "harness real-time e-markets"
+                }
+              },
+              {
+                "id": 2,
+                "name": "nama 2",
+                "username": "dua",
+                "email": "dua@gmail.com",
+                "address": {
+                  "street": "jalan 2",
+                  "suite": "apt 2",
+                  "city": "kota 2",
+                  "zipcode": "90566-7771",
+                  "geo": {
+                    "lat": "-43.9509",
+                    "lng": "-34.4618"
+                  }
+                },
+                "phone": "089629534811",
+                "website": "dua.net",
+                "company": {
+                  "name": "dua.Inc",
+                  "catchPhrase": "Proactive didactic contingency",
+                  "bs": "synergize scalable supply-chains"
+                }
+              },
+              {
+                "id": 3,
+                "name": "nama 3",
+                "username": "tiga",
+                "email": "tiga@gmail.com",
+                "address": {
+                  "street": "jalan 3",
+                  "suite": "Suite 3",
+                  "city": "kota 3",
+                  "zipcode": "59590-4157",
+                  "geo": {
+                    "lat": "-68.6102",
+                    "lng": "-47.0653"
+                  }
+                },
+                "phone": "089639534812",
+                "website": "tiga.info",
+                "company": {
+                  "name": "tiga.Inc",
+                  "catchPhrase": "Face to face bifurcated interface",
+                  "bs": "e-enable strategic applications"
+                }
+            ]
+
+### retrieve users by id [GET /users/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 200 (application/json)
+
+     + Body
+
+              {
+                "id": 1,
+                "name": "nama 1",
+                "username": "satu",
+                "email": "1@gmail.com",
+                "address": {
+                  "street": "jalan 1",
+                  "suite": "apt 1",
+                  "city": "kota 1",
+                  "zipcode": "92998-3874",
+                  "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                  }
+                },
+                "phone": "089639534610",
+                "website": "satu.org",
+                "company": {
+                  "name": "satu.Inc",
+                  "catchPhrase": "Multi-layered client-server neural-net",
+                  "bs": "harness real-time e-markets"
+                }
+              }
+
+### create new users [POST /users]
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+              {
+                "id": 1,
+                "name": "nama 1",
+                "username": "satu",
+                "email": "1@gmail.com",
+                "address": {
+                  "street": "jalan 1",
+                  "suite": "apt 1",
+                  "city": "kota 1",
+                  "zipcode": "92998-3874",
+                  "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                  }
+                },
+                "phone": "089639534610",
+                "website": "satu.org",
+                "company": {
+                  "name": "satu.Inc",
+                  "catchPhrase": "Multi-layered client-server neural-net",
+                  "bs": "harness real-time e-markets"
+                }
+              }
+
++ Response 201 (application/json)
+
+     + Body
+
+              {
+                "id": 1,
+                "name": "nama 1",
+                "username": "satu",
+                "email": "1@gmail.com",
+                "address": {
+                  "street": "jalan 1",
+                  "suite": "apt 1",
+                  "city": "kota 1",
+                  "zipcode": "92998-3874",
+                  "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                  }
+                },
+                "phone": "089639534610",
+                "website": "satu.org",
+                "company": {
+                  "name": "satu.Inc",
+                  "catchPhrase": "Multi-layered client-server neural-net",
+                  "bs": "harness real-time e-markets"
+                }
+              }
+
+### update users [PUT /users/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+     + Body
+
+              {
+                "id": 1,
+                "name": "nama 1",
+                "username": "satu",
+                "email": "1@gmail.com",
+                "address": {
+                  "street": "jalan 1",
+                  "suite": "apt 1",
+                  "city": "kota 1",
+                  "zipcode": "92998-3874",
+                  "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                  }
+                },
+                "phone": "089639534615",
+                "website": "satu.org",
+                "company": {
+                  "name": "satu.Inc",
+                  "catchPhrase": "Multi-layered client-server neural-net",
+                  "bs": "harness real-time e-markets"
+                }
+              }
+
++ Response 200 (application/json)
+
+     + Body
+
+              {
+                "id": 1,
+                "name": "nama 1",
+                "username": "satu",
+                "email": "1@gmail.com",
+                "address": {
+                  "street": "jalan 1",
+                  "suite": "apt 1",
+                  "city": "kota 1",
+                  "zipcode": "92998-3874",
+                  "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                  }
+                },
+                "phone": "089639534615",
+                "website": "satu.org",
+                "company": {
+                  "name": "satu.Inc",
+                  "catchPhrase": "Multi-layered client-server neural-net",
+                  "bs": "harness real-time e-markets"
+                }
+              }
+
+### delete users [DELETE /users/{id}]
+
++ Parameters
+
+     + id:1
+
++ Request (application/json)
+
+     + Headers
+
+            Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
++ Response 204
