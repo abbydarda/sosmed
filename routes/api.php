@@ -16,8 +16,13 @@ use Illuminate\Http\Request;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::get('/',function(){
-    $data = App\User::find(1);
-    return $data;
-    
-});
+// Route::group(['middleware' => 'auth:api'], function () {
+  Route::get('/users','ShowUsers');
+  // Route::get('/',function(){
+  //     $data = App\User::find(1);
+  //     return $data;
+  // });
+  // Route::post('/register', function(Request $request){
+  //     return App\User::create($request->all());
+  // });
+// });
