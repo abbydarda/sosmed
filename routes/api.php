@@ -21,6 +21,7 @@ use Illuminate\Http\Request;
   Route::get('/users/{id}','ShowUsersbyId');
   Route::post('/users','StoreUser');
   Route::delete('/users/{id}','DeleteUser');
+  Route::put('/users/{id}','UpdateUser');
   // Route::get('/',function(){
   //     $data = App\User::find(1);
   //     return $data;

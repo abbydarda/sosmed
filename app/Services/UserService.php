@@ -26,12 +26,14 @@
     public function deleteuser($id)
     {
       $data = User::find($id);
-      // dd($data);
       $data = $data->delete();
-      if ($data==true) {
-        return true;
-      }else {
-        return false;
-      }
+      return json_encode([],JSON_FORCE_OBJECT);
+    }
+
+    public function updateuser($id,$req)
+    {
+      $data = User::find($id);
+      $update = $data->update($req);
+      return $data;
     }
   }

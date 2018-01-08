@@ -6,4 +6,5 @@ interface UserServiceInterface{
   public function showuserbyid($id);
   public function storeuser($data);
   public function deleteuser($id);
+  public function updateuser($id,$data);
 }

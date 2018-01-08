@@ -10,6 +10,6 @@ class DeleteUser extends Controller
     public function __invoke(UserServiceInterface $service, $id)
     {
       $data = $service->deleteuser($id);
-      return response([],204);
+      return response($data,200,['Content-type'=>'application/json']);
     }
 }
