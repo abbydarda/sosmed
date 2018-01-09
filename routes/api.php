@@ -12,10 +12,10 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::post('/users','StoreUser');
 Route::group(['middleware' => 'auth:api'], function () {
   Route::get('/users','ShowUsers');
   Route::get('/users/{id}','ShowUsersbyId');
-  Route::post('/users','StoreUser');
   Route::delete('/users/{id}','DeleteUser');
   Route::put('/users/{id}','UpdateUser');
 
