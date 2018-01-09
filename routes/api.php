@@ -19,5 +19,9 @@ use Illuminate\Http\Request;
   Route::delete('/users/{id}','DeleteUser');
   Route::put('/users/{id}','UpdateUser');
 
-  Route::get('/albums','ShowAlbums') ;
+  Route::get('/albums','ShowAlbums');
+  Route::get('/albums/{id}','ShowAlbumbyId');
+  Route::post('/albums','StoreAlbum');
+  Route::put('/albums/{id}','UpdateAlbum');
+  Route::delete('/albums/{id}','DeleteAlbum');
 // });

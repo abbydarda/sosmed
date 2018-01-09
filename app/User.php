@@ -29,4 +29,9 @@ class User extends Authenticatable
     ];
 
     protected $casts = ['address'=>'json','company'=>'json'];
+
+    public function Albums()
+    {
+      return $this->hasMany('App\Album');
+    }
 }

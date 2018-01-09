@@ -13,4 +13,13 @@ class AlbumTransformer
       ];
     });
   }
+
+  public function TransformItem($data)
+  {
+      return [
+        'userId'=>$data->userId,
+        'id'=>$data->id,
+        'title'=>$data->title
+      ];
+  }
 }
