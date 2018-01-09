@@ -10,8 +10,15 @@ class ShowPhotos extends Controller
 {
     public function __invoke(PhotoTransformer $transformer ,PhotoServiceInterface $service)
     {
-      $result = $service->showphotos();
-      $result = $transformer->TransformCollection($result);
-      return response($result,200);
+      if (!request('albumId')) {
+        $result = $service->showphotos();
+        $result = $transformer->TransformCollection($result);
+        return response($result,200);
+      }else{
+        $albumId=request('albumId');
+        $result = $service->showphotobyalbumid($albumId);
+        $result = $transformer->TransformCollection($result);
+        return response($result,200);
+      }
     }
 }
