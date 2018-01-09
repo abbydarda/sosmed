@@ -273,6 +273,7 @@ HOST: http://polls.apiblueprint.org/
       + Body
 
               {
+                "userId":1
                 "title":"ini judul satu",
                 "body":"ini konten satu"
               }
@@ -300,7 +301,11 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization: Bearer abcdefghaiklmnopqrstupwxyz
 
-+ Response 204
++ Response 200 (application/json)
+
+      + Body
+
+              {}
 
 ## Comments API [/comments]
 
@@ -544,7 +549,11 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
-+ Response 204
++ Response 200 (application/json)
+
+      + Body
+
+              {}
 
 ## Albums API [/albums]
 
@@ -637,7 +646,7 @@ HOST: http://polls.apiblueprint.org/
               "title": "album 1"
             }
 
-### Retrieve Albums by UserId [GET /albums/{userId}]
+### Retrieve Albums by UserId [GET /albums/{?userId}]
 
 + Parameters
 
@@ -747,7 +756,11 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
-+ Response 204
++ Response 200 (application/json)
+
+      + Body
+
+              {}
 
 ## Photos API [/photos]
 
@@ -860,7 +873,7 @@ HOST: http://polls.apiblueprint.org/
                "thumbnailUrl": "http://placehold.it/150/810b14"
              }
 
-### Retrieve Photos by AlbumId [GET /photos/{albumId}]
+### Retrieve Photos by AlbumId [GET /photos/{?albumId}]
 
 + Parameters
 
@@ -988,7 +1001,11 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
-+ Response 204
++ Response 200 (application/json)
+
+      + Body
+
+              {}
 
 ## Todos API [/todos]
 
@@ -1090,7 +1107,7 @@ HOST: http://polls.apiblueprint.org/
                "completed": false
             }
 
-### Retrieve Todos by UserId [GET /todos/{userId}]
+### Retrieve Todos by UserId [GET /todos/{?userId}]
 
 + Parameters
 
@@ -1209,7 +1226,11 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
-+ Response 204
++ Response 200 (application/json)
+
+      + Body
+
+              {}
 
 ## Users API [/users]
 
@@ -1366,7 +1387,8 @@ HOST: http://polls.apiblueprint.org/
                   "name": "satu.Inc",
                   "catchPhrase": "Multi-layered client-server neural-net",
                   "bs": "harness real-time e-markets"
-                }
+                },
+                "password":"abbydarda"
               }
 
 + Response 201 (application/json)
@@ -1420,44 +1442,7 @@ HOST: http://polls.apiblueprint.org/
                   "suite": "apt 1",
                   "city": "kota 1",
                   "zipcode": "92998-3874",
-                  "geo": {      $datas = User::all();
-
-      $result =  $datas->map(function ($data){
-        if ($data->address == null) {
-          return [
-            "id"=>$data->id,
-            "name"=>$data->name,
-            "email"=>$data->email,
-            "address"=>[
-              'street'=>'',
-              'suite'=>'',
-              'city'=>'',
-              'zipcode'=>'',
-              'geo'=>[
-                'lat'=>'',
-                'lang'=>''
-              ]
-            ],
-          ];
-        }else {
-          return [
-            "id"=>$data->id,
-            "name"=>$data->name,
-            "email"=>$data->email,
-            "address"=>[
-              'street'=>$data->address['street'],
-              'suite'=>$data->address['suite'],
-              'city'=>$data->address['city'],
-              'zipcode'=>$data->address['city'],
-              'geo'=>[
-                'lat'=>$data->address['geo']['lat'],
-                'lang'=>$data->address['geo']['lang']
-              ]
-            ],
-          ];
-        }
-      });
-      return $result;
+                  "geo": {
                     "lat": "-37.3159",
                     "lng": "81.1496"
                   }
@@ -1511,4 +1496,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
-+ Response 204
++ Response 200 (application/json)
+
+      + Body
+
+              {}

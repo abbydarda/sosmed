@@ -21,7 +21,7 @@ class PhotoService implements PhotoServiceInterface
 
   public function showphotobyalbumid($albumId)
   {
-    return Photo::find([$albumId]);
+    return Photo::where('albumId',$albumId)->get();
   }
 
   public function storephoto($data)

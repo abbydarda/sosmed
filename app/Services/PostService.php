@@ -24,7 +24,6 @@ class PostService implements PostServiceInterface
 
   public function ShowPostsbyUserId($userId){
 
-    // dd(Post::where('userId',$userId)->get());
     return Post::where('userId',$userId)->get();
 
   }

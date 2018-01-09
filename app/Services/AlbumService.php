@@ -19,7 +19,7 @@ class AlbumService implements AlbumServiceInterface
 
   public function showalbumbyuserid($userId)
   {
-    return Album::find([$userId]);
+    return Album::where('userId',$userId)->get();
   }
 
   public function storealbum($data)
