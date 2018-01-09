@@ -25,6 +25,12 @@ use Illuminate\Http\Request;
   Route::put('/albums/{id}','UpdateAlbum');
   Route::delete('/albums/{id}','DeleteAlbum');
 
+  Route::get('/photos','ShowPhotos');
+  Route::get('/photos/{id}','ShowPhotosbyId');
+  Route::post('/photos','StorePhotos');
+  Route::put('/photos/{id}','UpdatePhotos');
+  Route::delete('/photos/{id}','DeletePhotos');
+  
   Route::get('/posts','ShowPosts');
   Route::get('/posts/{id}','ShowPostsbyId');
   Route::get('/posts/{postId}/comments','ShowPostsCommentsbypostId');
