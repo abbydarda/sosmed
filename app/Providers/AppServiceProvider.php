@@ -4,8 +4,10 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Services\Sosmed\UserServiceInterface;
+use App\Services\Sosmed\PostServiceInterface;
 use App\Services\Sosmed\AlbumServiceInterface;
 use App\Services\UserService;
+use App\Services\PostService;
 use App\Services\AlbumService;
 
 
@@ -30,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
     {
       $this->app->bind(UserServiceInterface::class, UserService::class);
       $this->app->bind(AlbumServiceInterface::class, AlbumService::class);
+      $this->app->bind(PostServiceInterface::class, PostService::class);
     }
 }
