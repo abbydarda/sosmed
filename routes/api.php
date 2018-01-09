@@ -30,4 +30,11 @@ use Illuminate\Http\Request;
   Route::post('/photos','StorePhotos');
   Route::put('/photos/{id}','UpdatePhotos');
   Route::delete('/photos/{id}','DeletePhotos');
+  
+  Route::get('/posts','ShowPosts');
+  Route::get('/posts/{id}','ShowPostsbyId');
+  Route::get('/posts/{postId}/comments','ShowPostsCommentsbypostId');
+  Route::post('/posts','StorePosts');
+  Route::put('/posts/{id}','UpdatePosts');
+  Route::delete('/posts/{id}','DeletePosts');
 // });
