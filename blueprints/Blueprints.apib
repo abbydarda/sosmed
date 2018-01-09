@@ -3,6 +3,40 @@ HOST: http://polls.apiblueprint.org/
 
 # tugas
 
+## Request Token [/oauth/token]
+
+    Request Token is a api to request token to access the other API
+
+### Request Token [POST /oauth/token]
+
++ Request (application/json)
+
+      + Headers
+
+             Accept : application/json
+
+      +  Body
+
+                {
+                    "grant_type":"password",
+                    "client_id":3,
+                    "client_secret":"VXmeQYamn3zYY1bw0pDvWsIfxh8RKp6bA7CAHW8Z",
+                    "username":"darda.abby@gmail.com",
+                    "password":"abbydarda",
+                    "scope":""
+                }
+
++ Response 200 (application/json)
+
+      + Body
+
+                {
+                    "token_type": "Bearer",
+                    "expires_in": 31536000,
+                    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQyMmRlMjM2M2Y0YjJkZWM2YmU4NzAwNjdjNjFhNDJiNzE3MWYxYmVjNzQ2Y2VkNWRjZGUwMTM5M2JkYzJlZTIyZTc1ZmY4NzFjMTVmOWM1In0.eyJhdWQiOiIzIiwianRpIjoiNDIyZGUyMzYzZjRiMmRlYzZiZTg3MDA2N2M2MWE0MmI3MTcxZjFiZWM3NDZjZWQ1ZGNkZTAxMzkzYmRjMmVlMjJlNzVmZjg3MWMxNWY5YzUiLCJpYXQiOjE1MTUxNTU2MjQsIm5iZiI6MTUxNTE1NTYyNCwiZXhwIjoxNTQ2NjkxNjI0LCJzdWIiOiI5Iiwic2NvcGVzIjpbIioiXX0.O_jV-sqwhP3ukM_qsn0u9yWxLKJug2sxRUskxG1wxNQC0zn3yT7W8UxAv9QURktzgQe52aVro7Bjm9e66WPBrlr6D58yBmEVg_8iycEGC6aCAtI6eg7tkPHVDy8CgbQOV7_qLixnD2a7HGAWVpsjD3kJF3mvpnHlgU9aOs5xcYrCwuM0YAcnLLvC5_mNEajheY2KU9J8GcdJvzKfuNb1cWcYBc7Ga16Ul2o-dTgy1vX_vev9f0g479bq8zU3dPY34ICqlML7Ca5cJZp1hR_CSWffZ9Mfu-OlAZudoCOm7o_7EIC85YFbycVhek4SRld6rRD9__vNcLdIicCn5V41Swe_j6Rf747HHSlPxsWW3HM64_svShtsiAhZDQwra-3EoogVauoGN80qHhHzWtNq3gZQ2ZHQ5rOtWgEBW5Fp5jkAkOEmtqqXwRUqamlIhMZEuo3YCiF2_BDi2oyIkY0JBVSrfGfBlJD77IbFLnYpKmUruIf3AW2Nzdgr8Bg1hSw0be5vCO00wwsqTBJ2eQfZVZls_J8lLs5oEbMvpnIHRzB0UVVi32SAXvXJO9_JjDyEPQsAf9OoGejlziSF00oStP8t_RDBYJ_CZDwC_YKXuxEPE4ED2Sp8AewkVyZ9Op58z89cQKPgiHrD_7I3fYF6_UITpHhSpdeeSjz8v87L2dI",
+                    "refresh_token": "def50200e9a7becb279b75576d40c0cc9c4c8223db892706d48a7096843cb915255dfba1b94ee563aa40af12c4e2c7534c7730defdfb8ab1c2c300bdd728755c43679d5791f43666b659f2891fa06e3b78bfffa38caedb7310b19ab2c49668072cf543c43281da79e206e33135de4ead04dbe9f114d8062c7300def8f3f61e753f0ed650488cd6a87fb14850353030067cf99f4ace69b905a745636828843fc0e88f45a50d38e8769d0bdc253aae9d8f3450a7e00d57d3775486333e55771e5cafdd34258720b306a2bc9c7d282c4fa025cae21be88f39de7cf498023ca564024e37037194d7d5eb4d40be8aec61e044a259566595ec215f01653a214947b9166461fb07fcecbe8b51ccf119a1ca2e69da99ab167fc72b42e42dd70e95418419d4ce60b87832a4cebd3eb7180c36933f5773b158e9bc0067dd586bc32b834ed70a121e5232a8f35cae06e8ff47529a54a9af2d7789df3c2d17f426de85a5bd2b3168"
+                }
+
 ## Posts API [/posts]
 
     Post is a API to retrive, create, update, delete a post
@@ -14,6 +48,8 @@ HOST: http://polls.apiblueprint.org/
       + Headers
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+              Accept : application/json
 
 + Response 200 (application/json)
 
@@ -94,6 +130,8 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
+              Accept : application/json
+
 + Response 200 (application/json)
 
       + Body
@@ -116,6 +154,8 @@ HOST: http://polls.apiblueprint.org/
       + Headers
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+              Accept : application/json
 
 + Response 200 (application/json)
 
@@ -163,6 +203,8 @@ HOST: http://polls.apiblueprint.org/
       + Headers
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+              Accept : application/json
 
 + Response 200 (application/json)
 
@@ -239,6 +281,8 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
+              Accept : application/json
+
       + Body
 
               {
@@ -269,6 +313,8 @@ HOST: http://polls.apiblueprint.org/
       + Headers
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+              Accept : application/json
 
       + Body
 
@@ -301,6 +347,8 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization: Bearer abcdefghaiklmnopqrstupwxyz
 
+              Accept : application/json
+
 + Response 200 (application/json)
 
       + Body
@@ -318,6 +366,8 @@ HOST: http://polls.apiblueprint.org/
       + Headers
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+              Accept : application/json
 
 + Response 200 (application/json)
 
@@ -409,6 +459,8 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
+              Accept : application/json
+
 + Response 200 (application/json)
 
       + Body
@@ -432,6 +484,8 @@ HOST: http://polls.apiblueprint.org/
       + Headers
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+              Accept : application/json
 
 + Response 200 (application/json)
 
@@ -483,6 +537,8 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
+              Accept : application/json
+
       + Body
 
               {
@@ -515,6 +571,8 @@ HOST: http://polls.apiblueprint.org/
       + Headers
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
+
+              Accept : application/json
 
       + Body
 
@@ -549,6 +607,8 @@ HOST: http://polls.apiblueprint.org/
 
               Authorization : Bearer abcdefghaiklmnopqrstupwxyz
 
+              Accept : application/json
+
 + Response 200 (application/json)
 
       + Body
@@ -566,6 +626,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -636,6 +698,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
 + Response 200 (application/json)
 
      + Body
@@ -657,6 +721,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -698,6 +764,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
      + Body
 
             {
@@ -727,6 +795,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
      + Body
 
             {
@@ -741,12 +811,12 @@ HOST: http://polls.apiblueprint.org/
             {
               "userId": 1,
               "id": 1,
-              "title": "album satu"
+              "title": "album satu"Accept : application/json
             }
 
 ### Delete a Album [DELETE /albums/{id}]
 
-+ Parameters
++ ParametersAccept : application/json
 
      + id:1
 
@@ -755,6 +825,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -773,6 +845,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -861,6 +935,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
 + Response 200 (application/json)
 
      + Body
@@ -884,6 +960,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -935,6 +1013,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
      + Body
 
               {
@@ -968,6 +1048,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
      + Body
 
               {
@@ -1000,6 +1082,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -1051,7 +1135,7 @@ HOST: http://polls.apiblueprint.org/
                 "id": 5,
                 "title": "judul 5",
                 "completed": false
-              },
+              },Accept : application/json
               {
                 "userId": 2,
                 "id": 6,
@@ -1096,6 +1180,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
 + Response 200 (application/json)
 
      + Body
@@ -1118,6 +1204,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -1164,6 +1252,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
      + Body
 
             {
@@ -1194,6 +1284,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
      + Body
 
@@ -1226,6 +1318,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
 + Response 200 (application/json)
 
       + Body
@@ -1243,6 +1337,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
@@ -1329,6 +1425,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
 + Response 200 (application/json)
 
      + Body
@@ -1365,6 +1463,8 @@ HOST: http://polls.apiblueprint.org/
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
 
+            Accept : application/json
+
      + Body
 
               {
@@ -1376,7 +1476,7 @@ HOST: http://polls.apiblueprint.org/
                   "suite": "apt 1",
                   "city": "kota 1",
                   "zipcode": "92998-3874",
-                  "geo": {
+                  "geo": {Accept : application/json
                     "lat": "-37.3159",
                     "lng": "81.1496"
                   }
@@ -1430,6 +1530,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
      + Body
 
@@ -1495,6 +1597,8 @@ HOST: http://polls.apiblueprint.org/
      + Headers
 
             Authoriation: Bearer abcdefghijklmnopqrstupwxyz
+
+            Accept : application/json
 
 + Response 200 (application/json)
 
