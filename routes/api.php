@@ -43,4 +43,10 @@ use Illuminate\Http\Request;
   Route::post('/comments','StoreComments');
   Route::put('/comments/{id}','UpdateComments');
   Route::delete('/comments/{id}','DeleteComments');
+
+  Route::get('/todos','ShowTodos');
+  Route::get('/todos/{id}','ShowTodosbyId');
+  Route::post('/todos','StoreTodos');
+  Route::put('/todos/{id}','UpdateTodos');
+  Route::delete('/todos/{id}','DeleteTodos');
 // });
