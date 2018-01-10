@@ -49,7 +49,7 @@ Run the server using this command
 ```
 php artisan serve
 ```
-### Retrieve Client ID and Client Secret for the Authorizatien
+### Retrieve Client ID and Client Secret for the Authorization
 
 You can retrieve the client ID and client secret with use this command
 
